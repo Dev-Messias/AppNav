@@ -6,6 +6,12 @@ export default function Sobre({ route }){
 
   const navigation = useNavigation();
 
+  //mudando nome na barra sobre.
+  navigation.setOptions({
+    title: `Sobre ${route.params?.nome}`
+  })
+
+
   return(
     <View>
       <Text>Sobre</Text>
@@ -14,6 +20,10 @@ export default function Sobre({ route }){
       <Button 
         title="Ir para Home!"
         onPress={() => navigation.goBack() }
+      />
+       <Button 
+        title=" Contato"
+        onPress={() => navigation.navigate('Contato')}
       />
     </View>
   );

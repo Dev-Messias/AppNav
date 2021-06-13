@@ -10,6 +10,7 @@ export default function Home(){
     navigation.navigate('Sobre', { nome: 'Messias', email: 'Messias@gmail.com'});
   }
 
+ 
   return(
     <View>
       <Text>Home</Text>
@@ -18,6 +19,8 @@ export default function Home(){
         title="Ir para sobre"
         onPress={irSobre}
       />
+     
+      
     </View>
   );
 }
